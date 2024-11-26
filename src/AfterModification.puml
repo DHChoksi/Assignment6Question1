@@ -1,0 +1,38 @@
+@startuml
+'https://plantuml.com/object-diagram
+@startuml
+object Document {
+    m_Characters = ["H", "e", "l", "l", "o", "W", "o", "r", "l", "d", "C", "S", "5", "8", "0"]
+}
+
+object TextCharacter_H {
+    m_Character = 'H'
+    m_CharacterProperties --> CharacterProperties_2
+}
+
+object CharacterProperties_2 {
+    m_Font = CALIBRI
+    m_Color = RED
+    m_Size = TWELVE
+}
+
+object TextCharacter_W {
+    m_Character = 'W'
+    m_CharacterProperties --> CharacterProperties_3
+}
+
+object CharacterProperties_3 {
+    m_Font = ARIAL
+    m_Color = BLACK
+    m_Size = TWELVE
+}
+
+object FlyweightFactory {
+    m_Flyweights = ["ARIAL-RED-TWELVE", "CALIBRI-BLUE-FOURTEEN", "VERDANA-BLACK-SIXTEEN", "CALIBRI-RED-TWELVE", "ARIAL-BLACK-TWELVE"]
+}
+
+Document --> TextCharacter_H
+Document --> TextCharacter_W
+FlyweightFactory --> CharacterProperties_2
+FlyweightFactory --> CharacterProperties_3
+@enduml

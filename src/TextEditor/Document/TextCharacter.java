@@ -1,8 +1,12 @@
-import Assignment6.FontProperties.Color;
-import Assignment6.FontProperties.Font;
-import Assignment6.FontProperties.Size;
+package TextEditor.Document;
+import java.io.Serializable;
+import TextEditor.Flyweight.FontProperties.Color;
+import TextEditor.Flyweight.FontProperties.Font;
+import TextEditor.Flyweight.FontProperties.Size;
+import TextEditor.Flyweight.CharacterProperties;
+import TextEditor.Flyweight.FlyweightFactory;
 
-public class TextCharacter
+public class TextCharacter implements Serializable
 {
     private final char m_Character;
     private final CharacterProperties m_CharacterProperties;

@@ -1,11 +1,13 @@
-import Assignment6.FontProperties.Color;
-import Assignment6.FontProperties.Font;
-import Assignment6.FontProperties.Size;
+package TextEditor.Flyweight;
 
+import TextEditor.Flyweight.FontProperties.Color;
+import TextEditor.Flyweight.FontProperties.Font;
+import TextEditor.Flyweight.FontProperties.Size;
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
-public class FlyweightFactory
+public class FlyweightFactory implements Serializable
 {
     private Map<String, CharacterProperties> m_Flyweights = new HashMap<>();
 

@@ -1,11 +1,14 @@
-import Assignment6.FontProperties.Color;
-import Assignment6.FontProperties.Font;
-import Assignment6.FontProperties.Size;
+package TextEditor.Document;
 
+import TextEditor.Flyweight.FontProperties.Color;
+import TextEditor.Flyweight.FontProperties.Font;
+import TextEditor.Flyweight.FontProperties.Size;
+import TextEditor.Flyweight.FlyweightFactory;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Document
+public class Document implements Serializable
 {
     private List<TextCharacter> m_Characters = new ArrayList<>();
     private FlyweightFactory m_Factory = new FlyweightFactory();

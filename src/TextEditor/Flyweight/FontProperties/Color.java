@@ -1,4 +1,4 @@
-package Assignment6.FontProperties;
+package TextEditor.Flyweight.FontProperties;
 
 public enum Color
 {
